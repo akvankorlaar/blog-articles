@@ -1,0 +1,11 @@
+author:
+    name:  Arent van Korlaar
+    email: akvankorlaar 'at' gmail 'dot' com
+    urls:
+        github:  https://github.com/akvankorlaar
+        twitter: https://twitter.com/akvankorlaar
+
+settings:
+    introduction: author.md
+    drafts: /drafts/
+    published: /published/
