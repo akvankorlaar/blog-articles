@@ -1,14 +1,16 @@
 <?php
 
-class ColorFieldCounter {
+class ColorField {
 
     /**
      * Two dimensional data field
+     * @var array
      */
     private $data;
 
     /**
      * All visited fields
+     * @var array
      */
     private $visited = [];
 
@@ -16,17 +18,17 @@ class ColorFieldCounter {
         $this->data = $data;
     }
 
-    public function extractLargestField(): array {
-        $all_connected_numbers = [];
-        foreach ($this->data as $index => $data_row) {
-            foreach ($data_row as $index2 => $data_point) {
-                $all_connected_numbers[] = $this->countConnectedToField($data_point, $index, $index2, 0);
+    public function calculateLargestField(): int {
+        $field_sizes = [];
+        foreach ($this->data as $x_index => $data_row) {
+            foreach ($data_row as $y_index => $color) {
+                $field_sizes[] = $this->countConnectedToField($color, $x_index, $y_index, 0);
                 //clean up again for next loop
                 $this->visited = [];
             }
         }
 
-        return $all_connected_numbers;
+        return max($field_sizes);
     }
 
     private function countConnectedToField(int $color, int $x, int $y): int {
@@ -77,5 +79,5 @@ $data = [[1, 2, 2, 3],
     [3, 2, 2, 2],
 ];
 
-$bar = new ColorFieldCounter($data);
-var_dump($bar->extractLargestField());
+$color_field = new ColorFieldCounter($data);
+var_dump($color_field->extractLargestField());

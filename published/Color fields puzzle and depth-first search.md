@@ -1,18 +1,15 @@
-
-
-# Color fields puzzle and depth-first search
-
 Imagine you have a 4x4 two-dimensional field with red, blue and green tiles.
 Your job is to write a program that finds the size of the largest connected field.
 Connected meaning that a color has to be connected by a field with the same color
 on the left, right, top or bottom. 
 
-![colorfields](export.png)
+![colorfields](/images/colorfield.png)
+
+As you can see, in the image the solution would be the 7 connected green fields.
 
 While this seems simple, what makes this
 puzzle interesting is that it involves many different programming techniques,
 and so I thought it would be fun to write a blog about it.
-As you can see, in the image the solution would be the 7 connected green fields
 
 If you're up for a challenge, you could try to program
 the puzzle in your favorite programming language, and come back later to 
@@ -29,9 +26,9 @@ So you will have:
 ```php
 
 $data = [[1, 2, 2, 3],
-         [2, 2, 2, 3],
+         [2, 2, 3, 3],
          [3, 3, 3, 3],
-         [3, 2, 2, 2],
+         [2, 2, 2, 2],
         ];
 
 ```
@@ -57,14 +54,15 @@ class ColorFieldCounter {
 When counting, an important consideration is that we need 
 a way to store which fields we have been before, because you only
 want to count each field once. We can treat our 4x4 grid as 
-a set of coordinates. So top left would be: 1,4
-and bottom right would be 4,1. We can make use of this when storing
+a set of coordinates with an x-axis and a y-axis. So top left would be point (1,4)
+and bottom right would be point (4,1). We can make use of this when storing
 where we've already been by adding these coordinates in key value pairs
-in an associative array. So if we've been to 4,1, we can do `$visited[$x . $y] = true;`
+in an associative array. So if we've been to point (4,1), we store this value
+by setting `$visited[$x . $y] = true;`
 We can use these values to look up if we've been there without having
 to loop through everything again. 
 
-In PHP, an associative array is implemented as a hash map underneath, so checking if something has been visited this way is pretty fast.
+In PHP, an associative array is implemented as a hash map underneath, so checking if something has been visited is pretty fast.
 
 ```php
 
@@ -96,7 +94,8 @@ class ColorFieldCounter {
 ```
 
 Next we'll want a method for looking up the neighbours of a given coordinate.
-You'll have to do some collision detection for this.
+You'll have to do some collision detection for this. Also remember we only want
+the fields that have the same color.
 
 ```php
     private function getNeighbours(int $color, int $x, int $y): array {
@@ -119,7 +118,7 @@ You'll have to do some collision detection for this.
 ```
 
 Now comes the real tricky part. You can't just count the color that occurs
-most, because you have to look if everything is connected. So imagine
+most in the grid, because you have to look if everything is connected. So imagine
 you started at a certain point, you'll have to check all its neighbours if
 the point is connected to others of the same color. After this,
 you have to check the neighbours of the neighbours, and afterwards the
@@ -152,15 +151,19 @@ start by marking the current field as visited. Afterwards we get all the neighbo
 that have the same color. If there aren't any connected to the current point
  the function terminates as 1 + 0 = 1.
 
-Imagine there are three blue fields connected to each other (as in 2,1 - 4,1 of the example).
+Imagine there are three blue fields connected to each other (for example points (2,1), (3,1 and (4,1) of the example).
 When you call this algorithm on the first point, it will first mark itself as visited.
 It will find one other connected neighbour with the same color: the second point. After
 calling this point, and marking it, this point will also only find one other point,
 despite having 2 neighbours with the same color, because the first one has already been marked. 
 The last point will not find any other connected neighbours, so our third call terminates with 1 + 0.
-This is the result that will be passed on to the second call for the second point,
+Now we start backtracking. The first result will be passed on to the second call for the second point,
 and so our second call will terminate in 1 + 1 = 2. Now we're back at the call that started
-at our original point, which will now terminate with 1 + 2 = 3. 
+at our original point, which will now terminate with 1 + 2 = 3.
+
+This is a [depth-first search algorithm](https://en.wikipedia.org/wiki/Depth-first_search),
+ because the algorithm always explores the first neighbour it encounters, as far as it can,
+before starting to backtrack.
 
 Now that the hard part is over, we just need something to call this function
 for every point in our grid, and store the result. This can be done by just doing two loops. 
@@ -181,8 +184,24 @@ Afterwards, the largest field is found by taking the largest number of the resul
 
         return max($all_connected_numbers);
     }
-
 ```
+
+Now let's run it.
+
+```php
+$data = [[1, 2, 2, 3],
+    [2, 2, 3, 3],
+    [3, 3, 3, 3],
+    [2, 2, 2, 2],
+];
+
+$color_field_counter = new ColorFieldCounter($data);
+var_dump($color_field_counter->extractLargestField());
+```
+
+Assuming you named the file ColorFieldCounter.php, running
+```php ColorFieldCounter.php ``` in the terminal
+should return 7.
 
 ## Improvements
 
@@ -198,3 +217,5 @@ Also, strictly speaking we do not have to clear the visited array every time we 
 a point. We only have to start a depth-first search on any point on a field to find the number
 of connected points of that field, and so it is not necessary to do another search if any point of
  the field is already in the visited array.
+
+In my next blog, I plan to refactor this algorithm to an iterative solution.

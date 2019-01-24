@@ -1,8 +1,8 @@
 author:
-    name:  Arent van Korlaar
-    email: akvankorlaar 'at' gmail 'dot' com
+    name: Arent
+    email: test@test.nl
     urls:
-        github:  https://github.com/akvankorlaar
+    github:  https://github.com/akvankorlaar
 
 settings:
     introduction: author.md
