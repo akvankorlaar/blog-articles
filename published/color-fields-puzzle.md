@@ -12,7 +12,7 @@ on the left, right, top or bottom.
 While this seems simple, what makes this
 puzzle interesting is that it involves many different programming techniques,
 and so I thought it would be fun to write a blog about it.
-As you can see, in the image the solution in this case would be the 7 connected green fields
+As you can see, in the image the solution would be the 7 connected green fields
 
 If you're up for a challenge, you could try to program
 the puzzle in your favorite programming language, and come back later to 
