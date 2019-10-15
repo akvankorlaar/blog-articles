@@ -1,4 +1,4 @@
-Imagine you have a 4x4 two-dimensional field with red, blue and green tiles.
+Imagine you have a picture with red, blue and green tiles.
 Your job is to write a program that finds the size of the largest connected field.
 Connected meaning that a color has to be connected by a field with the same color
 on the left, right, top or bottom. 
