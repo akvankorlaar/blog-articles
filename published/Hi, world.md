@@ -1,12 +1,10 @@
-Hi! This is my blog.
+Hi. Welcome to my blog!
 This is the place where I write about.. 
 well pretty much anything I'd like really!
 
-Thank you my dear former colleagues
-creating the code behind this blog and
-open sourcing its code. Its awesome!
-https://github.com/yannickl88
-https://github.com/linaori
-
-The blogs code:
+This blog is based on a fork of this repository:
 https://github.com/yannickl88/blog
+
+Check it out, its awesome!
+
+Arent
