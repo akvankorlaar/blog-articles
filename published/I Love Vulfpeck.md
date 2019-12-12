@@ -2,7 +2,7 @@ When taking an adventure within the deep caverns of Youtube you may find a true 
 It was during one of these adventures one day that I happened to find the beautiful
 funk band that is Vulfpeck. Youtube's almighty machine had rightly decided I needed some more
 funk in my life, and Vulfpeck delivered.
-#
+
 Beind kind of confused a few minutes when seeing the first Vulfpeck video,
 I was immediately hooked afterwards. These guys have a lot going for them.
 One of the first things you'd notice is the solid musicianship that all of 
