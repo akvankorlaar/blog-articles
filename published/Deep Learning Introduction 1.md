@@ -8,6 +8,19 @@ with an emphasis on the theory and the math that drives this technology. For thi
 of a feedforward neural network could look like.
 I hope you enjoy this series!
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Introduction
 
 A  **neural network** is a computer algorithm composed of a
