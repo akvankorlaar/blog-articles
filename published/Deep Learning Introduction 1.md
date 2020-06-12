@@ -8,18 +8,15 @@ with an emphasis on the theory and the math that drives this technology. For thi
 of a feedforward neural network could look like.
 I hope you enjoy this series!
 
-
-
-
-
-
-
-
-
-
-
-
-
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 ## Introduction
 
