@@ -1,5 +1,5 @@
 [//]: # (TITLE: Deep Learning Introduction Part 1: Input Data and Neural Network Architecture)
-[//]: # (DATE: 2020-07-12T10:00:00+01:00)
+[//]: # (DATE: 2020-07-12)
 [//]: # (TAGS: AI, deep learning, neural networks)
 
 This is part 1 of a blog series on deep learning.
