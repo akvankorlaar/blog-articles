@@ -187,7 +187,7 @@ of our neural network (excluding the bias units):
 
 The following is a mathematical representation of the neural network until now: 
 
-![equations1](equations1.gif) 
+![equations1](/images/equations1.gif) 
 
 With multiple neurons connected through multiple layers, the weights are aranged as matrixes. For example, the 6 weights in the between the
 input layer and the first hidden layer are arranged as a [2x3] matrix (2 input values, 3 neurons in the first hidden layer), and the bias here is a bias vector with 3 elements (because we have 3 neurons in the first hidden layer).
