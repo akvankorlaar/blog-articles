@@ -1,7 +1,8 @@
-# Deep Learning introduction part 1: Input data and neural network architecture
+# Deep Learning input data and neural network architecture
 
-This blog series is intended as an introduction into deep learning,
-with an emphasis on the theory and the math that drives this technology. For this blog series I will be using Python 3 and Pandas. Also, some familiarity with linear algebra (vectors, matrices) will help. This first part will be about preprocessing example data, and outlines how a basic architecture
+This is part 1 of a blog series on deep learning.
+This series is intended as an introduction into deep learning,
+with an emphasis on the theory and the math that drives this technology. For this blog series we will be using Python 3 and Pandas. Also, some familiarity with linear algebra (vectors, matrices) will help. This first part will be about preprocessing example data, and outlines how a basic architecture
 of a feedforward neural network could look like.
 I hope you enjoy this series!
 
@@ -20,8 +21,8 @@ Despite their consistent
 rise in popularity in recent years, neural networks
 and their fundamentall building blocks have been
 around for quite a while: Frank Rosenblatt laid out
-some of the fundational building blocks for the neural network in
-1958. Thats over 60 years ago!
+some of the fundational building blocks for the neural network in 1958.
+Thats over 60 years ago!
 
 Over the years neural networks were improved, forgotten,
 improved, and forgotten again. For years
