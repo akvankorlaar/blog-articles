@@ -139,7 +139,7 @@ preprocessed_df.to_csv('preprocessed_shrub_dataset.csv')
 
 The following is a visualisation of our preprocessed dataset:
 
-![preprocessed_shrub_dataset_plot.jpg](preprocessed_shrub_dataset_plot.jpg) 
+![preprocessed_shrub_dataset_plot.jpg](/images/preprocessed_shrub_dataset_plot.jpg) 
 Figure 1: Visualisation of reprocessed shrub dataset, with Hazel Shrub (0) in
 blue, and Alder Buckthorn Shrub (1) in orange. 
 
@@ -156,7 +156,7 @@ does some mathematical transformation, and produces output.
 The mathematical transformation most commonly consists of multiplying the
 input value by a weight value, and adding some bias. For example:
 
-![equation2](equation2.gif) 
+![equation2](/images/equation2.gif) 
 
 Where w is a **weight** value, and b is a **bias** value. The weights and the bias are the learnable **parameters** of the neural network. Without them our neural network would not be able to learn anything. Recall that we want to classify different types of shrub species based on their leaf size and shrub height. The goal when training a neural network is to create a model that is most likely able to explain the observed data, using these learnable parameters of the neural network. When training, the values
 of the weights and the bias are adjusted slightly every iteration,
@@ -180,7 +180,7 @@ the number of neurons, so that means in total our neural network will have 25 pa
 The following is a graphical representation
 of our neural network (excluding the bias units): 
 
-![NeuralNetworkPicture](NeuralNetworkPicture.png) 
+![NeuralNetworkPicture](/images/NeuralNetworkPicture.png) 
 
  Fig1. Picture generated with help of http://alexlenail.me/NN-SVG/index.html
 
@@ -206,7 +206,7 @@ output. There are many different kinds of activation functions,
 but the most common being the Rectified Linear Unit (**ReLU**). ReLU is currently
 very popular for usage in the hidden layers because of its simplicity, while still being very powerfull. ReLU is easily implemented, and also easily differientable. ReLU is defined as:
 
-![relu_equation](relu_equation.gif) 
+![relu_equation](/images/relu_equation.gif) 
 
 The following is an implementation of ReLU:
 
@@ -226,11 +226,11 @@ The output of the sigmoid activation function stays within the 0-1
 range. This is handy, because we can then assume that if the output is > 0.5, the neural network classified the input as a Hazel Shrub. Otherwise the neural network has classified the input as an Alder Blackthorn Shrub. The sigmoid activation function satures when the arguments are large or small. This
 activation function is defined by:
 
-![sigmoid_equation](sigmoid_equation.gif) 
+![sigmoid_equation](/images/sigmoid_equation.gif) 
 
 With the activation functions added, our model now looks like this:
 
-![neural_network_architecture_equations2](neural_network_architecture_equations2.gif) 
+![neural_network_architecture_equations2](/images/neural_network_architecture_equations2.gif) 
 
 Now that we have completed our neural network architecture, we can
 do a full example run through our neural network from input to predicted output. Some knowledge on matrix
@@ -238,28 +238,28 @@ multiplication will be helpfull here. Take a look at for example: https://www.ma
 
 For the input values, we will use the first row of our preprocessed dataset. The values (rounded to 2 decimals) for the leave size here and the shrub height here are 0.34 and 0.40. Because we do not have values for the weights and the bias, I will pick them here ourselves. As mentioned earlier, at the start of training the weights are commonly initialised as small random values, and the bias is 0. For now, for the weights I will pick random values between 0 and 2, and I will set all the bias values to -0.5. So:
 
-![hidden_layer_1_init](hidden_layer_1_init.gif) 
+![hidden_layer_1_init](/images/hidden_layer_1_init.gif) 
 
 Then:
 
-![hidden_layer_1_calc](hidden_layer_1_calc.gif)
+![hidden_layer_1_calc](/images/hidden_layer_1_calc.gif)
 
 And as a last step apply ReLU:
 
-![hidden_layer_1_result](hidden_layer_1_result.gif) 
+![hidden_layer_1_result](/images/hidden_layer_1_result.gif) 
 
 Now we can add this result as input to the second hidden layer. So:
 
-![hidden_layer_2_init_calc](hidden_layer_2_init_calc.gif)
+![hidden_layer_2_init_calc](/images/hidden_layer_2_init_calc.gif)
 
 And now we can use the result of the second hidden layer
 as input for the final layer:
 
-![hidden_layer_3_init_calc](hidden_layer_3_init_calc.gif)
+![hidden_layer_3_init_calc](/images/hidden_layer_3_init_calc.gif)
 
 And as a last step apply the sigmoid activation function:
 
-![sigmoid_output](sigmoid_output.gif)
+![sigmoid_output](/images/sigmoid_output.gif)
 
 So there we have it, we did a complete run from input to output through our network. This is also called a **forward pass**. However, when we look
 at the first row of our preprocessed dataset, we know that these input values we just used belong to a Hazel Shrub, to which we assigned to number 0. Given that our predicted output is 0.65, and higher than 0.5, it means our network predicted the shrub to be the Alder Blackthorn Shrub, to which we assigned the number 1.
