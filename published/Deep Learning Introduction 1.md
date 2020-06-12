@@ -1,3 +1,7 @@
+[//]: # (TITLE: Deep Learning Introduction Part 1: Input Data and Neural Network Architecture)
+[//]: # (DATE: 2016-07-03T10:00:00+01:00)
+[//]: # (TAGS: AI, deep learning, neural networks)
+
 This is part 1 of a blog series on deep learning.
 This series is intended as an introduction into deep learning,
 with an emphasis on the theory and the math that drives this technology. For this blog series we will be using Python 3 and Pandas. Also, some familiarity with linear algebra (vectors, matrices) will help. This first part will be about preprocessing example data, and outlines how a basic architecture
