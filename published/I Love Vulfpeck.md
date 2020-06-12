@@ -1,3 +1,7 @@
+[//]: # (DATE: 2020-02-01T10:00:00+01:00)
+[//]: # (TAGS: music)
+
+
 When taking an adventure within the deep caverns of Youtube you may find a true gem.
 It was during one of these adventures one day that I happened to find the beautiful
 funk band that is Vulfpeck. Youtube's almighty machine had rightly decided I needed some more
