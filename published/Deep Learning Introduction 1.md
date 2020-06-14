@@ -40,7 +40,7 @@ Over the years neural networks were improved, forgotten,
 improved, and forgotten again. For years
 neural networks couldn't do much, 
 because, well, computers couldn't do much. In recent years however, with the
-help of the enormous rise of computing power neural
+help of the enormous rise of computing power, neural
 networks have proven to be invaluable in many many
 areas. With this technology becoming ever more
 usefull with each year, so does knowledge
@@ -103,7 +103,7 @@ So our dataset has 100 rows, containing leave size and shrub
 height of two different shrub species. The task of the neural network
 will be to, given some shrub leave size, and some shrub height,
 to predict the shrub species. In this example the leave size and shrub height are the input features, and will be the neural networks input. The shrub species is what the neural network has to predict, and will be the neural networks output. In
-our example we will have 2 possible shrub species for the output: Hazel Shrub and Alder Buckthorn Shrub. So this means we will have 2 output **classess**. This task is a **classification** task, because given some input our neural network has to predict the output class.
+our example we will have 2 possible shrub species for the output: Hazel Shrub and Alder Buckthorn Shrub. So this means we will have 2 output **classes**. This task is a **classification** task, because given some input our neural network has to predict the output class.
 The fact that there are only 2 possible classes to predict makes this task a **binary classification**.
 
 Note that for all these examples we already know the shrub species. Our
@@ -111,7 +111,7 @@ goal was to make our neural network predict exactly this, so why do we look
 at data where we already know the answer?
 The reason for this is that our network first needs to learn how different
 leave sizes and different shrub heights can lead to different shrub species.
-Data such as this, in which you already know the class you want to predict is
+Data such as this, in which we already know the class we want to predict is
 called **labeled data**. Data in which we do not know the class we want to predict is called **unlabeled data**. It is commonly hard to get alot of labeled data, because it often involes manual work to create. In our case
 the data is completely generated so luckily thats not the case here. However, suppose this was 'real' data, it means that expert on shrubs had a list of different leave sizes and shrub heights, and manually had to fill in the shrub species. It can take a while to get alot of labeled data that way. 
 
@@ -163,15 +163,15 @@ of neural network called a **feedforward neural network**.
 In a feedforward neural network the data flow is unidirectional:
 data comes in at the input, and goes out at the output.
 
-The most fundamental block of a neural network is the **artificial
+The most fundamental building block of a neural network is the **artificial
 neuron**. The artificial neuron is a unit that takes input,
 does some mathematical transformation, and produces output.
 The mathematical transformation most commonly consists of multiplying the
-input value by a weight value, and adding some bias. For example:
+input value by a scalar, and adding a scalar. For example:
 
 ![equation2](/images/equation2.gif) 
 
-Where w is a **weight** value, and b is a **bias** value. The weights and the bias are the learnable **parameters** of the neural network. Without them our neural network would not be able to learn anything. Recall that we want to classify different types of shrub species based on their leaf size and shrub height. The goal when training a neural network is to create a model that is most likely able to explain the observed data, using these learnable parameters of the neural network. When training, the values
+Where w is called a **weight** value, and b is called a **bias** value. The weights and the bias are the learnable **parameters** of the neural network. Without them our neural network would not be able to learn anything. Recall that we want to classify different types of shrub species based on their leaf size and shrub height. The goal when training a neural network is to create a model that is most likely able to explain the observed data, using these learnable parameters of the neural network. When training, the values
 of the weights and the bias are adjusted slightly every iteration,
 in an attempt to find their optimal values. Usually before training the weight
 values are initialised at small random values, and the bias values
@@ -179,7 +179,7 @@ are initialised at 0.
  
 The artificial neurons are organised in layers. We will have 3 types of layers:
 * The **input layer**. The input layer contains the input values without any weight or bias multiplication. In our case this is an input vector with 2 elements (shrub height and leave size).
-* The **output layer**. The output layer is the final layer of our neural network, and outputs the predicted value. In our case this will be a single scalar number in the 0 - 1
+* The **output layer**. The output layer is the final layer of our neural network, and outputs the predicted value. In our case this will be a single scalar in the 0 - 1
 range, indicating the predicted shrub species.
 * A **hidden layer**. Any layer that is not the input layer or the output layer is called a hidden layer. Their outputs are not directly observable. A hidden layer can contain any
 number of artificial neurons, and it is up to us to decide how many hidden layers there are, and how many artificial neurons they have.
@@ -236,7 +236,7 @@ unaltered input. We will use ReLU for the first hidden layer, and the second hid
 
 For our output layer we will use the **sigmoid** activation function. 
 The output of the sigmoid activation function stays within the 0-1
-range. This is handy, because we can then assume that if the output is > 0.5, the neural network classified the input as a Hazel Shrub. Otherwise the neural network has classified the input as an Alder Blackthorn Shrub. The sigmoid activation function satures when the arguments are large or small. This
+range. This is handy, because we can then assume that if the output is > 0.5, the neural network classified the input as a Hazel Shrub. Otherwise the neural network has classified the input as an Alder Blackthorn Shrub. The sigmoid activation function saturates when the arguments are large or small. This
 activation function is defined by:
 
 ![sigmoid_equation](/images/sigmoid_equation.gif) 
