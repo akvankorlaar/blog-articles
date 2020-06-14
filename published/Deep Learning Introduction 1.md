@@ -13,8 +13,6 @@ I hope you enjoy this series!
 </br>
 </br>
 </br>
-</br>
-</br>
 
 ## Introduction
 
@@ -234,7 +232,7 @@ unaltered input. We will use ReLU for the first hidden layer, and the second hid
 
 For our output layer we will use the **sigmoid** activation function. 
 The output of the sigmoid activation function stays within the 0-1
-range. This is handy, because we can then assume that if the output is > 0.5, the neural network classified the input as a Hazel Shrub. Otherwise the neural network has classified the input as an Alder Blackthorn Shrub. The sigmoid activation function saturates when the arguments are large or small. This
+range. This is handy, because we can then assume that if the output is > 0.5, the neural network classified the input as a Hazel Shrub. Otherwise the neural network has classified the input as an Alder Blackthorn Shrub. The output of the sigmoid activation function saturates when the arguments are large or small. This
 activation function is defined by:
 
 ![sigmoid_equation](/images/sigmoid_equation.gif) 
