@@ -15,8 +15,6 @@ I hope you enjoy this series!
 </br>
 </br>
 </br>
-</br>
-</br>
 
 ## Introduction
 
