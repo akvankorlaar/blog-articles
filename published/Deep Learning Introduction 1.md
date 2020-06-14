@@ -104,7 +104,7 @@ height of two different shrub species. The task of the neural network
 will be to, given some shrub leave size, and some shrub height,
 to predict the shrub species. In this example the leave size and shrub height are the input features, and will be the neural networks input. The shrub species is what the neural network has to predict, and will be the neural networks output. In
 our example we will have 2 possible shrub species for the output: Hazel Shrub and Alder Buckthorn Shrub. So this means we will have 2 output **classess**. This task is a **classification** task, because given some input our neural network has to predict the output class.
-The fact that there are only 2 possible classes to predict makes this task a task a **binary classification**.
+The fact that there are only 2 possible classes to predict makes this task a **binary classification**.
 
 Note that for all these examples we already know the shrub species. Our
 goal was to make our neural network predict exactly this, so why do we look
