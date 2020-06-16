@@ -237,7 +237,7 @@ activation function is defined by:
 
 ![sigmoid_equation](/images/sigmoid_equation.gif) 
 
-With the activation functions added, our model now looks like this:
+With the activation functions added, our neural network now looks like this:
 
 ![neural_network_architecture_equations2](/images/neural_network_architecture_equations2.gif) 
 
