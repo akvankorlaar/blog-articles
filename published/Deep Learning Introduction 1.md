@@ -149,6 +149,7 @@ preprocessed_df.to_csv('preprocessed_shrub_dataset.csv')
 The following is a visualisation of our preprocessed dataset:
 
 ![preprocessed_shrub_dataset_plot.jpg](/images/preprocessed_shrub_dataset_plot.jpg) 
+
 Figure 1: Visualisation of reprocessed shrub dataset, with Hazel Shrub (0) in
 blue, and Alder Buckthorn Shrub (1) in orange. 
 
@@ -183,8 +184,7 @@ number of artificial neurons, and it is up to us to decide how many hidden layer
 We can chain these layers together. For this example, we will have the input layer, 3 artificial neurons in a first hidden layer, 3 artificial neurons in a second hidden layer and finally the output layer with 1 artificial neuron. From layer to layer, every artificial neuron is connected using weights.
 This means that with 2 input elements
 and 3 neurons in the first hidden layer we will have (2 x 3 )
-6 weights in between. From the first hidden layer to the second hidden layer, we will have 9 weights (3 * 3), and from the second hidden layer to the final layer we will have 3 weights (3 * 1). The number of bias units equals
-the number of neurons, so that means in total our neural network will have 25 parameters (6 weights + 9 weights + 3 weights + 7 bias units).
+6 weights in between. From the first hidden layer to the second hidden layer, we will have 9 weights (3 times 3), and from the second hidden layer to the final layer we will have 3 weights (3 times 1). The number of bias units equals the number of neurons, so that means in total our neural network will have 25 parameters (6 weights + 9 weights + 3 weights + 7 bias units).
 
 The following is a graphical representation
 of our neural network (excluding the bias units): 
