@@ -164,11 +164,11 @@ The most fundamental building block of a neural network is the **artificial
 neuron**. The artificial neuron is a unit that takes input,
 does some mathematical transformation, and produces output.
 The mathematical transformation most commonly consists of multiplying the
-input value by a scalar, and adding a scalar. For example:
+input value by a vector of one or more elements, and adding a scalar. For example:
 
 ![equation2](/images/equation2.gif) 
 
-Where w is called a **weight** value, and b is called a **bias** value. The weights and the bias are the learnable **parameters** of the neural network. Without them our neural network would not be able to learn anything. Recall that we want to classify different types of shrub species based on their leaf size and shrub height. The goal when training a neural network is to create a model that is most likely able to explain the observed data, using these learnable parameters of the neural network. When training, the values
+Where w are the **weights**, and b is called the **bias**. The weights and the bias are the learnable **parameters** of the neural network. Without them our neural network would not be able to learn anything. Recall that we want to classify different types of shrub species based on their leaf size and shrub height. The goal when training a neural network is to create a model that is most likely able to explain the observed data, using these learnable parameters of the neural network. When training, the values
 of the weights and the bias are adjusted slightly every iteration,
 in an attempt to find their optimal values. Usually before training the weight
 values are initialised at small random values, and the bias values
