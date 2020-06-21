@@ -27,7 +27,8 @@ Now using this formula and filling in a probability of 50% yields:
 ```python
 import math
 
-- math.log2(0.5) = 1
+print(-math.log2(0.5))
+# Output: 1
 ```
 
 As expected, we only needed 1 question, so the information content of something that has a 50% chance happening is 1 bit. Now suppose we had 3 of these switches. How many yes/no questions would you need now to know the exact setting of all the switches? Now you need 3 questions:
@@ -52,21 +53,33 @@ would give every setting a 1/8 chance of being the correct one. Calculating the 
 ```python
 import math
 
--math.log2(1/8) = 3
+print(-math.log2(1/8))
+# Output: 3
 ```
 
 Now the information content is 3 bits. So as you can see the entropy increases when the probability of an event decreases.
 
-# Cost Function
+# The Cost Function
 
-This knowledge on entropy will help understanding the implementation of our **cost function** (Or **loss function** - sadly there is some disagreement on how to name this term). The cost function in neural networks, and in machine learning in general, represents the error between the predicted values of our neural network and the actual true values of our labeled data.
+Moving on to the **cost function**, the cost function in neural networks, and in machine learning in general, represents the error between the predicted values of our neural network and the actual true values of our labeled data. This term is sometimes also called **the loss function** - sadly there is some disagreement on how to name this term.
 
-When training a neural network, we seek to minimize the cost function. Often the cost function is implemented as the **cross-entropy** between the predicted values of our neural network and the actual values of our labeled data. For us, because we have 2 classes, we will be using **binary cross-entropy**.
+When training a neural network, we seek to minimize the cost function. Often the cost function is implemented as the **cross-entropy** between the predicted values of our neural network and the actual values of our labeled data. For us, because we have 2 classes, we will be using **binary cross-entropy**. The formula for binary cross-entropy is:
 
-When our predictions equal the true values, the binary cross-entropy is 0. When this is not the case, the cross-entropy is > 0. The formula for binary cross-entropy is:
+Equation 2
 
-Equation
+The outcome of this equation is a scalar value >= 0.
+When all our predictions exactly equal all true values, the outcome of the binary cross-entropy is 0. However, in practice this will almost never happen, because the final output activation of our neural network is the sigmoid, and the sigmoid saturates at its limits. This is not a bad thing however, because once our cost function reaches 0, the weights and bias values of our neural network will not be updated anymore.
+
+We can use the output of our neural network to tell how confident it is of its prediction. When binary-cross entropy is used, predictions that are confident and right do not add alot to the outcome of the cost function, but predictions that are confident and wrong add alot to the value of the cost function. This can be visualized with an example. Suppose the following are a set of output values that the neural network generated, and the corresponding true values:
+
+```
+1: Prediction 0.9, True value 1
+2: Prediction 0.9, True value 0
+3: Prediction 0.3, True value 0
+4: Prediction 0.5, True value 1
+```
 
 
-Equation 
+
+
  
