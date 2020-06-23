@@ -3,7 +3,7 @@
 [//]: # (TAGS: Artificial Intelligence, Deep Learning, Neural Networks)
 
 This blog is part of an introductory series on deep learning.
-For part 1 check: https://arentvankorlaar.nl/post/Deep%2offLearning%2offIntroduction%2offon.
+For part 1 check: https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%201.
 
 In this second part we will first dive a bit (more than one bit actually) into entropy, and afterwards explain what the cost function of a neural network is.
 
