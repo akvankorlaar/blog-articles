@@ -5,7 +5,8 @@
 This blog is part of an introductory series on deep learning.
 For part 1 check: https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%201.
 
-In this second part we will first dive a bit (more than one bit actually) into entropy, and afterwards explain what the cost function of a neural network is.
+In this second part  I will attempt to give a short explanation
+of entropy, and an explanation on what a cost function is.
 
 </br>
 </br>
@@ -15,7 +16,7 @@ In this second part we will first dive a bit (more than one bit actually) into e
 
 # Entropy
 
-**Entropy** is a measure with which the amount of information can be quantified. It is a cornerstone of information theory and very fundamentall to much of science in general. The basic intuition behind entropy is that events that are likely to occur do not contain alot of information, whereas events that are unlikely to occur contain alot of information. In this way,
+**Entropy** is a measure with which the amount of information can be quantified. It is a cornerstone of information theory and very fundamentall to much of science. The basic intuition behind entropy is that events that are likely to occur do not contain alot of information, whereas events that are unlikely to occur contain alot of information. In this way,
 entropy can be also seen as a measure of uncertainty: the higher the uncertainty, the higher the entropy.
 
 Entropy is commonly measured in bits. A bit can either be a 0 or 1. With more bits you can encode more information. A way to think about bits as containers of information, is to ask: 
