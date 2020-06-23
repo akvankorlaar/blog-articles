@@ -1,5 +1,5 @@
 [//]: # (TITLE: Deep Learning Introduction Part 2: Entropy and the Cost Function)
-[//]: # (DATE: 2020-07-22)
+[//]: # (DATE: 2020-07-23)
 [//]: # (TAGS: Artificial Intelligence, Deep Learning, Neural Networks)
 
 This blog is part of an introductory series on deep learning.
@@ -13,7 +13,6 @@ In this second part we will first dive a bit (more than one bit actually) into e
 entropy can be also seen as a measure of uncertainty: the higher the uncertainty, the higher the entropy. Entropy is commonly measured in bits. A bit can either be a 0 or 1. With more bits you can encode more information. A way to think about bits as containers of information, is to ask: 
 
 "How many yes/no questions do I need to answer to know the exact state of an event?"
-
 
 In order to explain this using an example, suppose you had a switch with 2 settings: on or off. At any time the switch can only be in one of these two settings. How many questions do you need to know the current setting of the switch? The answer is: exactly one. Why? You only need to ask on yes/no question: 'is the switch on?'. Now suppose we set the switch at a random setting, how much uncertainty is there of its position? 50% uncertainty,
 because the setting can either be 'on', or 'off'.
@@ -68,8 +67,7 @@ When training a neural network, we seek to minimize the cost function. Often the
 
 ![equation1](/images/blog2_equation1.gif) 
 
-Cross-entropy is a calculation of the entropy between two probability
-distributions. The distributions here being the true distribution we
+Cross-entropy is a calculation of the difference between two probability distribution in entropy. The distributions here being the true distribution we
 have from our labeled dataset, and the distribution predicted by our
 neural network.
 
@@ -105,7 +103,7 @@ When all our predictions exactly equal all true values, the outcome of the binar
 
 So now we have a neural network, and a cost function that can tell us
 how wrong our predictions are. What is left, is a system that can update
-the weights and the bias values of our neural network using the cost function.
+the weights and the bias values of o ur neural network using the cost function.
 This will be the topic of the next blog in this series.
 
 Thanks for reading this blog! Like you, I am also learning, so if you see any errors in the text, or if anything is unclear to you, please let me know.
