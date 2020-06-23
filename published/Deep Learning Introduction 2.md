@@ -16,11 +16,17 @@ In this second part we will first dive a bit (more than one bit actually) into e
 # Entropy
 
 **Entropy** is a measure with which the amount of information can be quantified. It is a cornerstone of information theory and very fundamentall to much of science in general. The basic intuition behind entropy is that events that are likely to occur do not contain alot of information, whereas events that are unlikely to occur contain alot of information. In this way,
-entropy can be also seen as a measure of uncertainty: the higher the uncertainty, the higher the entropy. Entropy is commonly measured in bits. A bit can either be a 0 or 1. With more bits you can encode more information. A way to think about bits as containers of information, is to ask: 
+entropy can be also seen as a measure of uncertainty: the higher the uncertainty, the higher the entropy.
+
+Entropy is commonly measured in bits. A bit can either be a 0 or 1. With more bits you can encode more information. A way to think about bits as containers of information, is to ask: 
 
 "How many yes/no questions do I need to answer to know the exact state of an event?"
 
-In order to explain this using an example, suppose you had a switch with 2 settings: on or off. At any time the switch can only be in one of these two settings. How many questions do you need to know the current setting of the switch? The answer is: exactly one. Why? You only need to ask on yes/no question: 'is the switch on?'. Now suppose we set the switch at a random setting, how much uncertainty is there of its position? 50% uncertainty,
+In order to explain this using an example, suppose you had a switch with 2 settings: on or off. At any time the switch can only be in one of these two settings. How many questions do you need to know the current setting of the switch? The answer is: one. Why? You only need to ask one yes/no question: 
+
+"Is the switch on?" 
+
+Now suppose we set the switch at a random setting, how much uncertainty is there of its position? 50% uncertainty,
 because the setting can either be 'on', or 'off'.
 
 The formula for entropy, when measured in bits, is given as:
@@ -63,7 +69,7 @@ print(-math.log2(1/8))
 # Output: 3
 ```
 
-Now the information content is 3 bits. So as you can see the entropy increases when the probability of an event decreases.
+Now the information content is 3 bits. So as you can see the entropy of an event increases when the probability of the event decreases.
 
 # The Cost Function
 
@@ -71,10 +77,9 @@ Moving on to the **cost function**, the cost function represents the error betwe
 
 When training a neural network, we seek to minimize the cost function. Often the cost function is implemented as the **cross-entropy** between the predicted values of our neural network and the actual values of our labeled data. For us, because we have 2 classes, we will be using **binary cross-entropy**. The formula for binary cross-entropy is:
 
-![equation1](/images/blog2_equation1.gif) 
+![equation1](/images/blog2_equation2.gif) 
 
-Cross-entropy is a calculation of the difference between two probability distribution in entropy. The distributions here being the true distribution we
-have from our labeled dataset, and the distribution predicted by our
+Binary Cross-entropy is a calculation of the difference between two probability distribution. The distributions here being the true distribution we have from our labeled dataset, and the distribution predicted by our
 neural network.
 
 We can use the output of our neural network to tell how confident it is of its prediction. When binary-cross entropy is used, predictions that are confident and right do not add alot to the outcome of the cost function, but predictions that are confident and wrong add alot to the value of the cost function. This can be visualized with an example. Suppose the following are a set of output values that the neural network generated, and the corresponding true values:
