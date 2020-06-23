@@ -5,8 +5,8 @@
 This blog is part of an introductory series on deep learning.
 For part 1 check: https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%201.
 
-In this second part  I will attempt to give a short explanation
-of entropy, and an explanation on what a cost function is.
+In this second part  I will attempt to give a short introduction
+on entropy, and an explanation on what a cost function is.
 
 </br>
 </br>
@@ -115,7 +115,7 @@ When all our predictions exactly equal all true values, the outcome of the binar
 
 So now we have a neural network, and a cost function that can tell us
 how wrong our predictions are. What is left, is a system that can update
-the weights and the bias values of o ur neural network using the cost function.
+the weights and the bias values of our neural network using the cost function.
 This will be the topic of the next blog in this series.
 
 Thanks for reading this blog! Like you, I am also learning, so if you see any errors in the text, or if anything is unclear to you, please let me know.
