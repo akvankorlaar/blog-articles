@@ -276,7 +276,7 @@ So thats completely wrong!
 
 Howevever this is no problem. We haven't actually trained our neural
 network yet, and so all output values currently have no
-meaningfull relationship with the target shrub species at all. But how do you adjust the weight and the bias parameters, so that our neural network can  predict the right shrub species? We need something that can tell us how wrong the predictions of the neural network are, and use this to update the values of our weight and bias parameters. This will be the topic for the second part of this blog series.
+meaningfull relationship with the target shrub species at all. But how do you adjust the weight and the bias parameters, so that our neural network can  predict the right shrub species? We need something that can tell us how wrong the predictions of the neural network are, and use this to update the values of our weight and bias parameters. This will be the topic for [the second part of this blog series](https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%202).
 
 Thanks for reading this blog! Like you, I am also learning, so if you see any errors in the text, or if anything is unclear to you, please let me know.
 
