@@ -1,5 +1,5 @@
 [//]: # (TITLE: Deep Learning Introduction Part 1: Input Data and Neural Network Architecture)
-[//]: # (DATE: 2020-07-12)
+[//]: # (DATE: 2020-06-12)
 [//]: # (TAGS: Artificial Intelligence, Deep Learning, Neural Networks)
 
 This is part 1 of a blog series on deep learning.
@@ -168,7 +168,7 @@ input value by a vector of one or more elements, and adding a scalar. For exampl
 
 ![equation2](/images/equation2.gif) 
 
-Where w are the **weights**, and b is called the **bias**. The weights and the bias are the learnable **parameters** of the neural network. Without them our neural network would not be able to learn anything. Recall that we want to classify different types of shrub species based on their leaf size and shrub height. The goal when training a neural network is to create a model that is most likely able to explain the observed data, using these learnable parameters of the neural network. When training, the values
+Where w is a vector containing **weights**, b is a scalar called the **bias**, x is a vector containing input values, and y is the scalar output. The weights and the bias are the learnable **parameters** of the neural network. Without them our neural network would not be able to learn anything. Recall that we want to classify different types of shrub species based on their leaf size and shrub height. The goal when training a neural network is to create a model that is most likely able to explain the observed data, using these learnable parameters of the neural network. When training, the values
 of the weights and the bias are adjusted slightly every iteration,
 in an attempt to find their optimal values. Usually before training the weight
 values are initialised at small random values, and the bias values

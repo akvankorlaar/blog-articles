@@ -1,5 +1,5 @@
 [//]: # (TITLE: Deep Learning Introduction Part 2: Entropy and the Cost Function)
-[//]: # (DATE: 2020-07-23)
+[//]: # (DATE: 2020-06-23)
 [//]: # (TAGS: Artificial Intelligence, Deep Learning, Neural Networks)
 
 This blog is part of an introductory series on deep learning.
