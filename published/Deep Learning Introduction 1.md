@@ -163,8 +163,8 @@ data comes in at the input, and goes out at the output.
 The most fundamental building block of a neural network is the **artificial
 neuron**. The artificial neuron is a unit that takes input,
 does some mathematical transformation, and produces output.
-The mathematical transformation most commonly consists of multiplying the
-input value by a vector of one or more elements, and adding a scalar. For example:
+The mathematical transformation most commonly consists of multiplying an
+input vector by another vector, and adding a scalar. For example:
 
 ![equation2](/images/equation2.gif) 
 
