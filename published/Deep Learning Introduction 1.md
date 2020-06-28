@@ -150,7 +150,7 @@ The following is a visualisation of our preprocessed dataset:
 
 ![preprocessed_shrub_dataset_plot.jpg](/images/preprocessed_shrub_dataset_plot.jpg) 
 
-Figure 1: Visualisation of reprocessed shrub dataset, with Hazel Shrub (0) in
+Figure 1: Visualisation of the preprocessed shrub dataset, with Hazel Shrub (0) in
 blue, and Alder Buckthorn Shrub (1) in orange. 
 
 # Neural Network Architecture

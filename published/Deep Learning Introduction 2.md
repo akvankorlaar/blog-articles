@@ -76,13 +76,13 @@ Now the information content is 3 bits. So as you can see the entropy of an event
 
 Moving on to the **cost function**, the cost function represents the error between the predicted values of our neural network and the actual true values of our labeled data. This term is sometimes also called **the loss function**.
 
-When training a neural network, we seek to minimize the cost function. What this means is that when the lower the cost function is, the better our neural network is able to near the true labeled values of our dataset. To calculate the cost function we need predictions of our neural network, and labeled values.
+When training a neural network, we seek to minimize the cost function. What this means is that the lower the cost function is, the better our neural network is able to near the true labeled values of our dataset. To calculate the cost function we need predictions of our neural network, and labeled values.
 
 Often the cost function is implemented as the **cross-entropy** between the predicted values of our neural network and the actual values of our labeled data. For us, because we have 2 classes, we will be using **binary cross-entropy**. The formula for binary cross-entropy is:
 
 ![equation1](/images/blog2_equation2.gif) 
 
-Binary Cross-entropy is a calculation of the difference between two probability distributions. The distributions here being the true distribution we have from our labeled dataset, and the distribution predicted by our
+Binary Cross-entropy is a calculation of the average difference between two probability distributions. The distributions here being the true distribution we have from our labeled dataset, and the distribution predicted by our
 neural network.
 
 We can use the output of our neural network to tell how confident it is of its prediction. When binary-cross entropy is used, predictions that are confident and right do not add alot to the outcome of the cost function, but predictions that are confident and wrong add alot to the value of the cost function. This can be visualized with an example. Suppose the following are a set of output values that the neural network generated, and the corresponding true values:
@@ -112,9 +112,9 @@ When using the equation above to calculate the binary cross-entropy for these 4 
 ```
 
 So the binary cross-entropy for these 4 points is 1.2471 bits.
-As you can see, predictions that are confident and wrong contribute
-way more to the final value than predictions that are confident
-and right.
+So this means that the average difference in information content between
+the true distribution, and our predicted distribution
+for an event is 1.2471 bits. As you can see, predictions that are confident and wrong contribute way more to the final value than predictions that are confident and right.
 
 The outcome of the binary cross-entropy always is a scalar value >= 0.
 When all our predictions exactly equal all true values, the outcome of the binary cross-entropy is 0. However, in practice this will almost never happen, because the final output activation of our neural network is the sigmoid, and the sigmoid saturates at its limits. This is not a bad thing however, because once our cost function reaches 0, the weights and bias values of our neural network will not be updated anymore.
