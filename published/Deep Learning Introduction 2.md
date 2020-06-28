@@ -3,7 +3,7 @@
 [//]: # (TAGS: Artificial Intelligence, Deep Learning, Neural Networks)
 
 This blog is part of an introductory series on deep learning.
-For part 1 check: https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%201.
+For part 1 check <a href="https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%201" target="_blank">this page</a>.
 
 In this second part  I will attempt to give a short introduction
 on entropy, and an explanation on what a cost function is.
@@ -94,7 +94,7 @@ We can use the output of our neural network to tell how confident it is of its p
 4: Prediction 0.5, True value 1
 ```
 
-Recall from [part 1 of this series](https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%201), that we assigned the value '0' to the Hazel Shrub, and the value '1' to the Alder Blackthorn Shrub.
+Recall from <a href="https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%201" target="_blank">part 1 of this series</a> that we assigned the value '0' to the Hazel Shrub, and the value '1' to the Alder Blackthorn Shrub.
 So in the first datapoint, our neural network is very confident that the
 datapoint is the Alder Blackthorn Shrub, and this is also its true value. The second datapoint however, our neural network is still as confident that the true value is the Alder Blackthorn Shrub, while the true value is the Hazel Shrub.
 

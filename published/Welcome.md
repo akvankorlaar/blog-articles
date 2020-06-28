@@ -4,11 +4,12 @@ Hello, my name is Arent van Korlaar. This website is a place where I want to sha
 
 The picture in the backdrop is a photo I shot of one of my favorite places in Holland, in the dunes of Zoutelande.
 
-If you are interested in setting up a blog like this yourself, check out https://github.com/yannickl88/blog. 
+If you are interested in setting up a blog like this yourself, check out 
+<a href="https://github.com/yannickl88/blog" target="_blank">this repository</a>. 
 I've basically forked this repository, and adapted some of its code for my own purposes.
 
 <a href="https://github.com/akvankorlaar" target="_blank">My Github</a>  
-My Linkedin: <a href="https://nl.linkedin.com/in/ak-van-korlaar" target="_blank">https://nl.linkedin.com/in/ak-van-korlaar</a>
+<a href="https://nl.linkedin.com/in/ak-van-korlaar" target="_blank">My Linkedin</a>
 
 Arent
 

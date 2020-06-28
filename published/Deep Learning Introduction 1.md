@@ -53,9 +53,7 @@ So at the data we start!
 Throughout this series we will build a neural network
 that is able to classify different types of shrubs based on their height and leave
 size. We will be using a generated dataset
-that is located at:
-
-https://github.com/akvankorlaar/NeuralNetworkBlog/blob/master/shrub_dataset.csv
+that is located <a href="https://github.com/akvankorlaar/NeuralNetworkBlog/blob/master/shrub_dataset.csv" target="_blank">here</a>. 
 
 First we take a look at the data to see what we have:
 
@@ -243,7 +241,8 @@ With the activation functions added, our neural network now looks like this:
 
 Now that we have completed our neural network architecture, we can
 do a full example run through our neural network from input to predicted output. Some knowledge on matrix
-multiplication will be helpfull here. Take a look at for example: https://www.mathsisfun.com/algebra/matrix-multiplying.html 
+multiplication will be helpfull here. Take a look <a href="https://www.mathsisfun.com/algebra/matrix-multiplying.html " target="_blank">this page</a> for a short tutorial on matrix multiplication.
+
 
 For the input values, we will use the first row of our preprocessed dataset. The values (rounded to 2 decimals) for the leave size here and the shrub height here are 0.34 and 0.40. Because we do not have values for the weights and the bias, I will pick them here ourselves. As mentioned earlier, at the start of training the weights are commonly initialised as small random values, and the bias is 0. For now, for the weights I will pick random values between 0 and 2, and I will set all the bias values to -0.5. So:
 
@@ -276,7 +275,7 @@ So thats completely wrong!
 
 Howevever this is no problem. We haven't actually trained our neural
 network yet, and so all output values currently have no
-meaningfull relationship with the target shrub species at all. But how do you adjust the weight and the bias parameters, so that our neural network can  predict the right shrub species? We need something that can tell us how wrong the predictions of the neural network are, and use this to update the values of our weight and bias parameters. This will be the topic for [the second part of this blog series](https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%202).
+meaningfull relationship with the target shrub species at all. But how do you adjust the weight and the bias parameters, so that our neural network can  predict the right shrub species? We need something that can tell us how wrong the predictions of the neural network are, and use this to update the values of our weight and bias parameters. This will be the topic for <a href="https://arentvankorlaar.nl/post/Deep%20Learning%20Introduction%202" target="_blank">for the second part of this blog series</a>.
 
 Thanks for reading this blog! Like you, I am also learning, so if you see any errors in the text, or if anything is unclear to you, please let me know.
 
