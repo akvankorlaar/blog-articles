@@ -7,7 +7,7 @@ The picture in the backdrop is a photo I shot of one of my favorite places in Ho
 If you are interested in setting up a blog like this yourself, check out https://github.com/yannickl88/blog. 
 I've basically forked this repository, and adapted some of its code for my own purposes.
 
-My Github: <a href="https://github.com/akvankorlaar" target="_blank">https://github.com/akvankorlaar</a>  
+<a href="https://github.com/akvankorlaar" target="_blank">My Github</a>  
 My Linkedin: <a href="https://nl.linkedin.com/in/ak-van-korlaar" target="_blank">https://nl.linkedin.com/in/ak-van-korlaar</a>
 
 Arent
